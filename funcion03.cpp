@@ -15,19 +15,34 @@ int main (){
 	    	case 1:
 			    cout<<"Ingresa el valor del lado del triangulo equilatero: "<<endl;
 			    cin>>lado;
-			    triangulo(lado);
+			    if (lado>0){
+			        triangulo(lado);	
+				}
+				else {
+					cout<<"ERROR, el lado de un triangulo no puede ser negativo ni 0, vuelva a intentarlo"<<endl;
+				}
 			    break;
 		    case 2:
 			    cout<<"Ingresa la diagonal mayor: "<<endl;
 			    cin>>dmayor;
 			    cout<<"Ingresa la diagonal menor: "<<endl;
 			    cin>>dmenor;
-			    rombo(dmayor,dmenor);
+			    if (dmayor>dmenor){
+			        rombo(dmayor,dmenor);	
+				}
+				else {
+					cout<<"ERROR, la diagonal mayor ingresada es menor que la segunda diagonal, intentelo de nuevo"<<endl;
+				}
 			    break;
 		    case 3:
 			    cout<<"Ingresa el lado del cubo: "<<endl;
 			    cin>>ladoc;
-			    cubo(ladoc);
+			    if (ladoc>0){
+			        cubo(ladoc);	
+				}
+				else {
+						cout<<"ERROR, el lado de un cubo no puede ser negativo ni 0, vuelva a intentarlo"<<endl;
+				}
 		        break;
 		    default:
 		    	cout<<"ERROR"<<endl;

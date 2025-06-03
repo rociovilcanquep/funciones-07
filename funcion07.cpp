@@ -23,6 +23,7 @@ int main() {
 	else if (num1 == num2) {
         cout << "ERROR, los numeros ingresados son iguales" << endl;
     } 
+    return 0;
 }
 
 //Función división cociente

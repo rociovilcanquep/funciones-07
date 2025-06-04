@@ -4,11 +4,20 @@ using namespace std;
 void MCDyMCM(int a,int b,int &mcd, int &mcm);
 
 int main (){
-	int x=18, y=24;
-	int rMCD, rMCM;
-	MCDyMCM(x,y,rMCD,rMCM);
-	cout<<"MCD: "<<rMCD<<endl;
-	cout<<"MCM: "<<rMCM<<endl;
+	int x, y;
+	cout<<"Ingresa el primer numero: ";
+	cin>>x;
+	cout<<"Ingresa el segundo numero: ";
+	cin>>y;
+	if (x==y){
+		cout<<"MCD y MCM es: "<<x<<endl;
+	}
+	else{
+	    int rMCD, rMCM;
+	    MCDyMCM(x,y,rMCD,rMCM);
+	    cout<<"MCD: "<<rMCD<<endl;
+    	cout<<"MCM: "<<rMCM<<endl;
+    }
 	return 0;
 }
 

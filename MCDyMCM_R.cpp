@@ -30,10 +30,10 @@ int main() {
 	                    MCDyMCM(x,y,rMCD,rMCM);
 	                    cout<<"MCD: "<<rMCD<<endl;
     	                cout<<"MCM: "<<rMCM<<endl;
-    	                i=i+1;
     	                S1=S1+rMCD;
     	                S2=S2+rMCM;
                     }
+                    i=i+1;
             }
             cout<<"La suma de los MCD ingresados es: "<<S1<<endl;
             cout<<"La suma de los MCM ingresados es: "<<S2<<endl;
@@ -54,8 +54,8 @@ int main() {
 	                MCDyMCM(x,y,rMCD,rMCM);
 	                cout<<"MCD: "<<rMCD<<endl;
     	            cout<<"MCM: "<<rMCM<<endl;
-    	            i=i+1;
                 }
+                i=i+1;
             }
             break;
 	    }

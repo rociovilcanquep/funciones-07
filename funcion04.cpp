@@ -1,5 +1,8 @@
 #include<iostream>
 using namespace std;
+
+int primos(int a);
+
 int main (){
 	int num, cant;
 	cout<<"¿Cuantos numeros quiere ingresar (no 0, ni negativos)?:"<<endl;
@@ -15,25 +18,13 @@ int main (){
 			cout<<"Ingresa el numero: "<<endl;
 			cin>>num;
 			if (num==0){
-        	cout<<"El cero no es ni un numero primo ni un numero compuesto";
+        	    cout<<"El cero no es ni un numero primo ni un numero compuesto";
         	}
 	        else{
-	        	cout<<"Divisores: "<<endl;
-			    for (int i=1;i<=num;i=i+1){
-    	            if (num%i==0){
-    	            cout<<i<<" ";
-    	            n=n+1;
-    	            }
-    	        }
-    	        if (n>2){
-	                cout<<endl<<"El numero es compuesto"<<endl;
-	            }
-            	else {
-	                cout<<endl<<"El numero es primo"<<endl;
-                }
-    	        S=S+num; 
-                a=a+1;
+	        	primos(num);
 	        }
+	        S=S+num; 
+            a=a+1;
 	    }
 	    cout<<"La suma es: "<<S<<endl;
     }
@@ -41,7 +32,23 @@ int main (){
 	return 0;
 }
 
- 
+//Función primos
+int primos(int a){
+	int n=0;
+	cout<<"Divisores: "<<endl;
+		for (int i=1;i<=a;i=i+1){
+    	    if (a%i==0){
+    	        cout<<i<<" ";
+    	        n=n+1;
+    	    }
+       }
+        if (n>2){
+	        cout<<endl<<"El numero es compuesto"<<endl;
+	    }
+        else {
+	        cout<<endl<<"El numero es primo"<<endl;
+        }
+}
 
 
 

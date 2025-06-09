@@ -11,10 +11,11 @@ int main() {
     cout << "¿Desea saber el numero maximo del MCM y MCD? (1=si, 2=no): ";
     cin >> opcion;
     system("cls");
-    int v=0, mayor=0;
+    int v=0;
     switch (opcion) {
         case 1: {
-            while (cant!=0 && v<cant) {
+        	int mayor1=0, mayor2=0;
+            while (cant>0 && v<cant) {
                 int x, y;
                 cout<<"Ingresa el primer numero: ";
                 cin>>x;
@@ -22,24 +23,29 @@ int main() {
                 cin>>y;
                 if (x==y) {
                     cout<<"MCD y MCM es: "<<x<<endl;
-                    if (mayor<x) {
-                        mayor=x;
+                    if (x>mayor1) {
+                        mayor1=x;
                     }
-                } else {
+                    if (x>mayor2){
+                    	mayor2=x;
+					}
+                } 
+				else {
                     int rMCD, rMCM;
                     MCDyMCM(x, y, &rMCD, &rMCM); 
                     cout<<"MCD: "<<rMCD<<endl;
                     cout<<"MCM: "<<rMCM<<endl;
-                    if (mayor<rMCD) {
-                        mayor=rMCD;
+                    if (mayor1<rMCD) {
+                        mayor1=rMCD;
                     }
-                    else if (mayor<rMCM) {
-                        mayor=rMCM;
+                    if (mayor2<rMCM) {
+                        mayor2=rMCM;
                     }
                 }
                 v=v+1;
             }
-            cout<<"El numero mayor de MCM y MCD es: "<<mayor<<endl;
+            cout<<"El numero mayor de MCM es: "<<mayor2<<endl;
+            cout<<"El numero mayor de MCD es: "<<mayor1<<endl;
             break;
         }
         case 2: {
